@@ -6,3 +6,4 @@ venv/
 .idea/
 *.log
 *.sqlite3
+.vercel

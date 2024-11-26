@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "¡Bienvenido a la API!"}
+    return {"message": "Hello from FastAPI on Vercel!"}
 
 @app.get("/health")
 def health_check():
@@ -13,3 +13,7 @@ def health_check():
 
 # Rutas para Market Data
 app.include_router(market_data.router, prefix="/api", tags=["Market Data"])
+
+if __name__ == '__main__':
+    import uvicorn
+    uvicorn.run(app)
